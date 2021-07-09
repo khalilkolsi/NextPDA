@@ -1,0 +1,7 @@
+{
+  "name": "NextPDA",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
