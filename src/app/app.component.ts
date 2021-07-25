@@ -6,13 +6,48 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Accueil', url: '/Accueil', icon: 'home' },
+    {
+      title: 'Produits',
+      url: '/Produits/liste-produits',
+      icon: 'albums',
+      subPages: [
+        { title: 'Liste des Produits', url: '/Produits/liste-produits' },
+      ]
+    },
+    {
+      title: 'Ventes',
+      url: '/Ventes/bon-livraison',
+      icon: 'cart',
+      subPages: [
+        { title: 'Bon de Livraison', url: '/Ventes/bon-livraison'},
+        { title: 'Factures', url: '/Ventes/factures' },
+        { title: 'Bon de Retour', url: '/Ventes/bon-retour' },
+        { title: 'Bon de Commande', url: '/Ventes/bon-commande' },
+        { title: 'Bon de Sortie', url: '/Ventes/bon-sortie' },
+        { title: 'Nouveau Bon de Livraison', url: '/Ventes/bl-create'},
+      ]
+    },
+    {
+      title: 'Clients', url: '/Clients/liste-clients', icon: 'people',
+      subPages: [
+        { title: 'Liste des Clients', url: '/Clients/liste-clients' },
+      ]
+    },
+    {
+      title: 'Stock',
+      url: '/Stock/bon-entree',
+      icon: 'server',
+      subPages: [
+        { title: 'Bons d\'Entrées', url: '/Stock/bon-entree'},
+        { title: 'Bon de Retour', url: '/Stock/bon-retour' },
+        { title: 'Inventaire', url: '/Stock/inventaire' },
+      ]
+    },
+    { title: 'Etats', url: '/Etats', icon: 'stats-chart' },
+    { title: 'Reédition Documents', url: '/Reedition-documents', icon: 'create' },
+    { title: 'Paramètres', url: '/Parametres', icon: 'settings' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders']; <ion-icon name="settings"></ion-icon>
+  constructor() { }
 }

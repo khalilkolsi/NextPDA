@@ -1,0 +1,31 @@
+<ion-content class="main">
+    <br>
+    <ion-searchbar #q showCancelButton="always" (ionClear)="cancel()" howCancelButton="focus" [(ngModel)]="search" (keyup)="getArticle(q.value)"></ion-searchbar>
+    <br>
+    <ion-grid style="justify-content: center;">
+        <ion-row>
+            <ion-col class="table-header">
+                Code
+            </ion-col>
+            <ion-col class="table-header">
+                Article
+            </ion-col>
+            <ion-col class="table-header">
+                TTC
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let i of items" (click)="selectProduit(i)">
+            <ion-col class="table-content">
+                {{ i.ARTICLE }}
+            </ion-col>
+            <ion-col class="table-content">
+                {{ i.REFERENCE }}
+            </ion-col>
+            <ion-col class="table-content">
+                {{ i.T1_PrixTTC }}
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+</ion-content>

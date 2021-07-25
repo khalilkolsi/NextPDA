@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Paramètres</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label position="stacked">Code Camion</ion-label>
+        <ion-input [value]="item.CodeCamion" [disabled]="!loginSucceeded"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Matricule Camion</ion-label>
+        <ion-input [value]="item.MatriculeCamion" [disabled]="!loginSucceeded"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Code PDA</ion-label>
+        <ion-input [value]="item.CodePDA" [disabled]="!loginSucceeded"></ion-input>
+    </ion-item>
+
+    <div *ngIf="!loginSucceeded" class="login-btn">
+        <ion-button expand="block" (click)="login()">Authetification</ion-button>
+    </div>
+
+    <!--div-- *ngIf="loginSucceeded">
+        success
+    </!--div-->
+
+</ion-content>

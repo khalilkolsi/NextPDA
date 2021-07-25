@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{ pageName }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="pageName === 'Bon de Livraison'">
+        <app-bon-livraison></app-bon-livraison>
+    </div>
+
+    <div *ngIf="pageName === 'Bon de Commande'">
+        <app-bon-commande></app-bon-commande>
+    </div>
+
+    <div *ngIf="pageName === 'Bon de Retour'">
+        <app-bon-retour></app-bon-retour>
+    </div>
+
+    <div *ngIf="pageName === 'Bon de Sortie'">
+        <app-bon-sortie></app-bon-sortie>
+    </div>
+
+    <div *ngIf="pageName === 'Factures'">
+        <app-factures></app-factures>
+    </div>
+
+    <div *ngIf="pageName === 'Nouveau Bon de Livraison'" style="width: 100%;">
+        <app-create></app-create>
+    </div>
+
+</ion-content>

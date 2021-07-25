@@ -1,0 +1,31 @@
+<ion-content class="main">
+    <br>
+    <ion-searchbar #q showCancelButton="always" (ionClear)="cancel()" howCancelButton="focus" [(ngModel)]="search" (keyup)="getClient(q.value)"></ion-searchbar>
+    <br>
+    <ion-grid style="justify-content: center;">
+        <ion-row>
+            <ion-col class="table-header">
+                Société
+            </ion-col>
+            <ion-col class="table-header">
+                Responsable
+            </ion-col>
+            <ion-col class="table-header">
+                Telephone
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let i of items">
+            <ion-col class="table-content">
+                {{ i.Societe }}
+            </ion-col>
+            <ion-col class="table-content">
+                {{ i.Responsable }}
+            </ion-col>
+            <ion-col class="table-content">
+                {{ i.Telefon }}
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+</ion-content>

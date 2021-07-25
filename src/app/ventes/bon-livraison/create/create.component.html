@@ -1,0 +1,80 @@
+<ion-item>
+    <ion-label position="floating">Client</ion-label>
+    <ion-input readonly value="{{client.Societe}}"></ion-input>
+</ion-item>
+
+<ion-grid>
+    <ion-row>
+        <ion-col>
+            <ion-item>
+                <ion-label position="floating">Article</ion-label>
+                <ion-input (click)="presentModal()" [(ngModel)]="selectedArticle.REFERENCE" readonly></ion-input>
+            </ion-item>
+        </ion-col>
+
+        <ion-col>
+            <ion-item>
+                <ion-label position="floating">Prix TTC</ion-label>
+                <ion-input readonly [(ngModel)]="selectedArticle.PrixVTTC"></ion-input>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <ion-item>
+                <ion-label position="floating">Qte</ion-label>
+                <ion-input [(ngModel)]="qte"></ion-input>
+            </ion-item>
+        </ion-col>
+
+        <ion-col>
+            <ion-item>
+                <ion-label position="floating">Stock</ion-label>
+                <ion-input readonly [(ngModel)]="selectedArticle.STOCK"></ion-input>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+            <ion-button color="success" expand="block" (click)="createBlLigne()">Ajouter</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+
+<br>
+
+<ion-grid>
+    <ion-row>
+        <ion-col class="table-header" style="padding-left: 5%;">Article</ion-col>
+        <ion-col class="table-header">Qte</ion-col>
+        <ion-col class="table-header">Prix TTC</ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let i of article_list;let j = index">
+        <ion-item-sliding>
+            <ion-item-options side="end">
+                <ion-item-option color="danger" expandable (click)="deleteLBlLigne(j)">
+                    <ion-icon name="trash-bin"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+
+            <ion-item class="list-item">
+                <ion-col>{{ i.ARTICLE }}</ion-col>
+                <ion-col>{{ i.Qte }}</ion-col>
+                <ion-col>{{ i.Prix }}</ion-col>
+            </ion-item>
+        </ion-item-sliding>
+    </ion-row>
+</ion-grid>
+
+<ion-footer class="footer">
+    <ion-toolbar>
+        <ion-title>Total TTC: {{ total }}</ion-title>
+        <ion-buttons slot="secondary">
+            <ion-button color="success">
+                Valider
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
