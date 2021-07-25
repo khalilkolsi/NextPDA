@@ -12,11 +12,11 @@ export class StockPage implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    if(this.activatedRoute.snapshot.paramMap.get('id') === 'bon_entree'){
+    if(this.activatedRoute.snapshot.paramMap.get('id') === 'bon-entree'){
       this.pageName = 'Bon d\'Entrée';
     } else if (this.activatedRoute.snapshot.paramMap.get('id') === 'inventaire'){
       this.pageName = 'Inventaire';
-    } else if (this.activatedRoute.snapshot.paramMap.get('id') === 'bon_retour'){
+    } else if (this.activatedRoute.snapshot.paramMap.get('id') === 'bon-retour'){
       this.pageName = 'Bon de Retour';
     }
   }
