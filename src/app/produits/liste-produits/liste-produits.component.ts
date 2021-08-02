@@ -34,7 +34,7 @@ export class ListeProduitsComponent implements OnInit {
   ) {
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'article.db',
+        name: 'NextPDA.db',
         location: 'default'
       })
         .then((db: SQLiteObject) => {

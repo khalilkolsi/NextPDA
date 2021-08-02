@@ -1,3 +1,26 @@
-<p>
-  bon-retour works!
-</p>
+<br>
+<ion-item>
+    <ion-label class="title">Recherche Client</ion-label>
+</ion-item>
+<br>
+<ion-item lines="none">
+    <ion-label>Client</ion-label>
+    <ion-input></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+    <ion-label>Code a barre</ion-label>
+    <ion-input></ion-input>
+</ion-item>
+<br>
+
+<ion-item>
+    <ion-label class="title">Clients à proximité</ion-label>
+</ion-item>
+<br>
+
+<ion-list>
+    <ion-item lines="none" *ngFor="let i of clients" (click)="createBR(i)">
+        <ion-label>{{ i.Societe }}</ion-label>
+    </ion-item>
+</ion-list>

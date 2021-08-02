@@ -25,7 +25,6 @@ export class AppComponent {
         { title: 'Bon de Retour', url: '/Ventes/bon-retour' },
         { title: 'Bon de Commande', url: '/Ventes/bon-commande' },
         { title: 'Bon de Sortie', url: '/Ventes/bon-sortie' },
-        { title: 'Nouveau Bon de Livraison', url: '/Ventes/bl-create'},
       ]
     },
     {

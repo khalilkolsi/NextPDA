@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS [BLLigne] (
-	[IdBLLigne] int NOT NULL AUTOINCREMENT PRIMARY KEY, 
+	[IdBLLigne] INTEGER PRIMARY KEY AUTOINCREMENT , 
 	[CodeArticle] nvarchar(20) NOT NULL, 
 	[IdCamionPDA] nvarchar(3), 
 	[Quantiter] float, 

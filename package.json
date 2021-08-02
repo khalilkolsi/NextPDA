@@ -23,6 +23,7 @@
     "@ionic-native/sqlite": "^5.34.0",
     "@ionic-native/sqlite-porter": "^5.34.0",
     "@ionic/angular": "^5.5.2",
+    "cordova-android": "9.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
@@ -81,7 +82,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android"
     ]
   }
 }

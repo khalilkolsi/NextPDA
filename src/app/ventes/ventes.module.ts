@@ -1,4 +1,5 @@
-import { CreateComponent } from './bon-livraison/create/create.component';
+import { CreateBrComponent } from './bon-retour/create-br/create-br.component';
+import { CreateBLComponent } from './bon-livraison/create-bl/create-bl.component';
 import { FacturesComponent } from './factures/factures.component';
 import { BonSortieComponent } from './bon-sortie/bon-sortie.component';
 import { BonRetourComponent } from './bon-retour/bon-retour.component';
@@ -29,7 +30,8 @@ import { VentesPage } from './ventes.page';
     BonRetourComponent,
     BonSortieComponent,
     FacturesComponent,
-    CreateComponent
+    CreateBLComponent,
+    CreateBrComponent
   ]
 })
 export class VentesPageModule {}

@@ -37,7 +37,7 @@
     <ion-row>
         <ion-col></ion-col>
         <ion-col>
-            <ion-button color="success" expand="block" (click)="createBlLigne()">Ajouter</ion-button>
+            <ion-button color="success" expand="block" (click)="createBsLigne()">Ajouter</ion-button>
         </ion-col>
     </ion-row>
 </ion-grid>
@@ -54,7 +54,7 @@
     <ion-row *ngFor="let i of article_list;let j = index">
         <ion-item-sliding>
             <ion-item-options side="end">
-                <ion-item-option color="danger" expandable (click)="deleteLBlLigne(j)">
+                <ion-item-option color="danger" expandable (click)="deleteLBsLigne(j)">
                     <ion-icon name="trash-bin"></ion-icon>
                 </ion-item-option>
             </ion-item-options>
@@ -70,9 +70,9 @@
 
 <ion-footer class="footer">
     <ion-toolbar>
-        <ion-title>Total TTC: {{ total }}</ion-title>
+        <ion-title>Total TTC: {{ totalTTC }}</ion-title>
         <ion-buttons slot="secondary">
-            <ion-button color="success">
+            <ion-button color="success" (click)="validate()">
                 Valider
             </ion-button>
         </ion-buttons>

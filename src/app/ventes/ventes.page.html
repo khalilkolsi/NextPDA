@@ -9,7 +9,7 @@
 
 <ion-content>
     <div *ngIf="pageName === 'Bon de Livraison'">
-        <app-bon-livraison></app-bon-livraison>
+        <app-bon-livraison [clients]="client_list"></app-bon-livraison>
     </div>
 
     <div *ngIf="pageName === 'Bon de Commande'">
@@ -17,7 +17,7 @@
     </div>
 
     <div *ngIf="pageName === 'Bon de Retour'">
-        <app-bon-retour></app-bon-retour>
+        <app-bon-retour [clients]="client_list"></app-bon-retour>
     </div>
 
     <div *ngIf="pageName === 'Bon de Sortie'">
@@ -29,7 +29,11 @@
     </div>
 
     <div *ngIf="pageName === 'Nouveau Bon de Livraison'" style="width: 100%;">
-        <app-create></app-create>
+        <app-create-bl></app-create-bl>
+    </div>
+
+    <div *ngIf="pageName === 'Nouveau Bon de Retour'" style="width: 100%;">
+        <app-create-br></app-create-br>
     </div>
 
 </ion-content>
